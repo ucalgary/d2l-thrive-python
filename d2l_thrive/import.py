@@ -40,7 +40,7 @@ class D2LThriveReportImporter(LMSObject):
 				# Generate a document id for the item. The id consists of the course's
 				# OrgUnitID and a hash of the URL.
 				#url_digest = hashlib.sha1(report_item['URL'].encode('utf-8')).hexdigest()
-				doc_id = '%s-%s' % (report_item['Course Offering Code'], report_item['Grade Item Id'])
+				doc_id = '%s-%s' % (report_item['CourseOfferingCode'], report_item['GradeItemId'])
 				report_item['_id'] = doc_id
 
 				self.process_item(report_item)
